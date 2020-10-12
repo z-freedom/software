@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class Test {
     private byte[] arr=new byte[1024];
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         final ArrayList<Test> list = new ArrayList<>();
-        while (true){
+        int counter=0;
+        while (counter++<1000){
             list.add(new Test());
+            Thread.sleep(1000);
         }
     }
 }
